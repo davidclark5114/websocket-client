@@ -98,13 +98,13 @@ class WebSocketTest(unittest.TestCase):
         ws.setdefaulttimeout(None)
 
     def testParseUrl(self):
-        p = parse_url("ws://www.example.com/r")
-        self.assertEqual(p[0], "www.example.com")
+        p = parse_url("ws://www.mybthub.com/r")
+        self.assertEqual(p[0], "www.mybthub.com")
         self.assertEqual(p[1], 80)
         self.assertEqual(p[2], "/r")
         self.assertEqual(p[3], False)
 
-        p = parse_url("ws://www.example.com/r/")
+        p = parse_url("ws://www.mybthub.com/r/")
         self.assertEqual(p[0], "www.example.com")
         self.assertEqual(p[1], 80)
         self.assertEqual(p[2], "/r/")
